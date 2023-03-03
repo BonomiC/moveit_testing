@@ -1,0 +1,3 @@
+Symlinking /mnt/working/moveit/devel/share/ar3_config/cmake/ar3_configConfig-version.cmake
+Symlinking /mnt/working/moveit/devel/share/ar3_config/cmake/ar3_configConfig.cmake
+Symlinking /mnt/working/moveit/devel/lib/pkgconfig/ar3_config.pc

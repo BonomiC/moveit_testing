@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- GDB functionality -->
+  <arg name="debug" default="false" />
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
+  <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+
+  <arg name="pipeline" default="ompl" />
+  <arg name="load_robot_description" default="true"/>
+  <arg name="moveit_controller_manager" default="simple" />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 world base_link" />
+
+  <!-- Load example URDF -->
+  <!-- <param name="robot_description" command="$(find xacro)/xacro '$(find rrbot_description)/urdf/rrbot.xacro'" /> -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rrbot_description)/launch/rrbot.rviz"/> -->
+  <param name="robot_description" textfile="$(find ar3_description)/urdf/ar3.urdf"/>
+  <!-- <arg name="load_robot_description" default="true"/> -->
+
+
+  <!-- <group ns="rrbot">
+
+    <node name="ar3_hardware" pkg="ar3_hardware" type="ar3_hardware" output="screen">
+    </node>
+
+
+    <rosparam file="$(find ar3_config)/config/ar3_controllers.yaml" command="load"/>
+
+    <node name="ros_control_controller_manager" pkg="controller_manager" type="controller_manager" respawn="false"
+	  output="screen" args="spawn joint_state_controller position_trajectory_controller arm_position_controller" />
+  </group> -->
+
+  <include file="$(dirname)/move_group.launch">
+    <arg name="allow_trajectory_execution" value="true"/>
+    <!-- <arg name="moveit_controller_manager" value="$(arg moveit_controller_manager)" /> -->
+    <!-- <arg name="fake_execution_type" value="$(arg fake_execution_type)"/> -->
+    <arg name="info" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="pipeline" value="$(arg pipeline)"/>
+    <arg name="load_robot_description" value="$(arg load_robot_description)"/>
+  </include>
+
+  <!-- <include file="$(dirname)/moveit_rviz.launch">
+    <arg name="rviz_config" value="$(dirname)/moveit.rviz"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include> -->
+
+</launch>

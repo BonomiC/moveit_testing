@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: knighttime_description
+    relative_path: urdf/knighttime_description.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/knighttime_description.srdf
+  CONFIG:
+    author_name: ck
+    author_email: ck@ck.com
+    generated_timestamp: 1677559287

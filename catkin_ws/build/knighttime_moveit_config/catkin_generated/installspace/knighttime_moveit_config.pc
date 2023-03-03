@@ -1,0 +1,8 @@
+prefix=/mnt/working/catkin_ws/install
+
+Name: knighttime_moveit_config
+Description: Description of knighttime_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

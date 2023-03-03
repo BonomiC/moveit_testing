@@ -1,0 +1,1 @@
+/mnt/working/moveit/devel/.private/knighttime_moveit_config/lib/pkgconfig/knighttime_moveit_config.pc

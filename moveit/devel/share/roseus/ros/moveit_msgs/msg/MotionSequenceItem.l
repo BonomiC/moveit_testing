@@ -1,0 +1,1 @@
+/mnt/working/moveit/devel/.private/moveit_msgs/share/roseus/ros/moveit_msgs/msg/MotionSequenceItem.l

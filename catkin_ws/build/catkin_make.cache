@@ -1,0 +1,2 @@
+ar3_config:ar3_description:ar3_hardware:gazebo_ros_demos/rrbot_control:gazebo_ros_demos/rrbot_description:gazebo_ros_demos/rrbot_gazebo:knighttime_description:knighttime_moveit_config:ros_control_boilerplate
+-DCATKIN_DEVEL_PREFIX=/mnt/working/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/mnt/working/catkin_ws/install -G Unix Makefiles

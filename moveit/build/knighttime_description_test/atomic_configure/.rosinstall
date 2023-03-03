@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /mnt/working/moveit/devel/.private/knighttime_description_test/setup.sh

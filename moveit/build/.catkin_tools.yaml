@@ -1,0 +1,6 @@
+devel_space: /mnt/working/moveit/devel
+install: false
+install_space: /mnt/working/moveit/install
+profile: default
+source_space: /mnt/working/moveit/src
+workspace: /mnt/working/moveit

@@ -1,0 +1,1 @@
+/mnt/working/moveit/devel/.private/moveit_tutorials/lib/pkgconfig/moveit_tutorials.pc

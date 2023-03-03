@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Programming_Kinematics">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.1853E-17 8.4117E-19 0.0848"
+        rpy="0 0 0" />
+      <mass
+        value="1.2701" />
+      <inertia
+        ixx="0.0087772"
+        ixy="5.9336E-21"
+        ixz="2.1031E-19"
+        iyy="0.0040745"
+        iyz="2.0072E-05"
+        izz="0.0047112" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Programming_Kinematics/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Programming_Kinematics/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="main_mast">
+    <inertial>
+      <origin
+        xyz="1.1158E-06 -9.0689E-05 0.46516"
+        rpy="0 0 0" />
+      <mass
+        value="2.6303" />
+      <inertia
+        ixx="0.27136"
+        ixy="-2.6617E-10"
+        ixz="1.1486E-06"
+        iyy="0.27079"
+        iyz="-0.00010405"
+        izz="0.0010919" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Programming_Kinematics/meshes/main_mast.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Programming_Kinematics/meshes/main_mast.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_main_mast"
+    type="continuous">
+    <origin
+      xyz="0 0 0.2032"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="main_mast" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="1" />
+  </joint>
+  <link
+    name="second_stage">
+    <inertial>
+      <origin
+        xyz="-9.2515E-17 1.4977E-16 -0.20623"
+        rpy="0 0 0" />
+      <mass
+        value="0.60003" />
+      <inertia
+        ixx="0.018663"
+        ixy="-6.8095E-20"
+        ixz="1.2704E-19"
+        iyy="0.018527"
+        iyz="-1.6631E-17"
+        izz="0.00027326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Programming_Kinematics/meshes/second_stage.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Programming_Kinematics/meshes/second_stage.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="main_mast_to_second_stage"
+    type="continuous">
+    <origin
+      xyz="0 0 0.8763"
+      rpy="0 0 0" />
+    <parent
+      link="main_mast" />
+    <child
+      link="second_stage" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="1" />
+  </joint>
+</robot>

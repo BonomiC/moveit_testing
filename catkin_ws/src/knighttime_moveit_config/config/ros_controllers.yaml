@@ -1,0 +1,22 @@
+arm_position_controller:
+  type: velocity_controllers/JointTrajectoryController
+  joints:
+    - main_mast_joint
+    - second_stage_joint
+    - extension_joint
+  gains:
+    main_mast_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    second_stage_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    extension_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

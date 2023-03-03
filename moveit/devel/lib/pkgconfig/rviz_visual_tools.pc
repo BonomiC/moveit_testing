@@ -1,0 +1,1 @@
+/mnt/working/moveit/devel/.private/rviz_visual_tools/lib/pkgconfig/rviz_visual_tools.pc

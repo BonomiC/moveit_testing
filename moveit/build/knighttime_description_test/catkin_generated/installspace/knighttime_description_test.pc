@@ -1,0 +1,8 @@
+prefix=/mnt/working/moveit/install
+
+Name: knighttime_description_test
+Description: Description of knighttime_description_test
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

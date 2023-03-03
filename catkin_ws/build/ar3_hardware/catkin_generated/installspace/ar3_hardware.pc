@@ -1,0 +1,8 @@
+prefix=/mnt/working/catkin_ws/install
+
+Name: ar3_hardware
+Description: Description of ar3_hardware
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs controller_manager rosparam_shortcuts

@@ -1,0 +1,12 @@
+Symlinking /mnt/working/moveit/devel/./env.sh
+Symlinking /mnt/working/moveit/devel/./setup.sh
+Symlinking /mnt/working/moveit/devel/./local_setup.bash
+Symlinking /mnt/working/moveit/devel/./setup.zsh
+Symlinking /mnt/working/moveit/devel/./local_setup.sh
+Symlinking /mnt/working/moveit/devel/./_setup_util.py
+Symlinking /mnt/working/moveit/devel/./cmake.lock
+Symlinking /mnt/working/moveit/devel/./setup.bash
+Symlinking /mnt/working/moveit/devel/./local_setup.zsh
+Symlinking /mnt/working/moveit/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /mnt/working/moveit/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /mnt/working/moveit/devel/lib/pkgconfig/catkin_tools_prebuild.pc

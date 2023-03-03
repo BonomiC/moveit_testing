@@ -1,0 +1,1 @@
+/mnt/working/moveit/devel/.private/moveit_msgs/share/moveit_msgs/msg/MoveGroupSequenceGoal.msg

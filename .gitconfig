@@ -1,0 +1,7 @@
+[user]
+	name = BonomiC
+	email = bonomi.c11@gmail.com
+[pull]
+	rebase = false
+[credential]
+	helper = "!f() { /mnt/working/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/node /tmp/vscode-remote-containers-8a426591-23b3-42d7-a565-c725d7682f9b.js git-credential-helper $*; }; f"

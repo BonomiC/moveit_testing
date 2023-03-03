@@ -1,0 +1,5 @@
+ros-noetic-moveit
+ros-noetic-ros-control
+ros-noetic-ros-controllers
+ros-noetic-rosparam-shortcuts
+libgflags-dev

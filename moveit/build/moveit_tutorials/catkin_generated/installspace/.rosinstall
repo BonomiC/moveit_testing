@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /mnt/working/moveit/install/setup.sh

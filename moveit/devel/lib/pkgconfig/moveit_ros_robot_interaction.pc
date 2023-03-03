@@ -1,0 +1,1 @@
+/mnt/working/moveit/devel/.private/moveit_ros_robot_interaction/lib/pkgconfig/moveit_ros_robot_interaction.pc

@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'main_mast_joint', 'second_stage_joint', 'extension_joint', 'claw_box_joint', ]

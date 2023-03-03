@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /mnt/working/moveit/devel/.private/moveit_resources_prbt_ikfast_manipulator_plugin/setup.sh

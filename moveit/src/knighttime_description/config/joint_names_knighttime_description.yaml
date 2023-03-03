@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'base_link_to_main_mast', 'main_mast_to_second_stage', ]

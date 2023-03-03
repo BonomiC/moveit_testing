@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="knighttime_description">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0.00366793241853114 0.00290773096243199 0.109134760686588" rpy="0 0 0" />
+            <mass value="32.0923334464686" />
+            <inertia ixx="2.06184060721584" ixy="-7.05777391430098E-07" ixz="6.26290297112458E-05" iyy="2.08394577109497" iyz="1.14542931581927E-07" izz="4.06881788272179" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="main_mast_link">
+        <inertial>
+            <origin xyz="-2.70628044402652E-05 -1.00257680477884E-06 0.521428558641285" rpy="0 0 0" />
+            <mass value="2.92736446099125" />
+            <inertia ixx="0.274890730497369" ixy="2.66961538184854E-10" ixz="-0.000103752206462548" iyy="0.270183568469711" iyz="-1.14496399034325E-06" izz="0.00661869007722592" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/main_mast_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/main_mast_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="main_mast_joint" type="revolute">
+        <origin xyz="0 0 0.24511" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="main_mast_link" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="1.57" effort="0" velocity="3" />
+    </joint>
+    <link name="second_stage">
+        <inertial>
+            <origin xyz="7.70983966387504E-15 2.31820571844935E-16 -0.15759287302501" rpy="0 0 0" />
+            <mass value="0.718426036319629" />
+            <inertia ixx="0.019632892367688" ixy="-4.25439758276834E-18" ixz="-5.64533309845954E-18" iyy="0.0187259617907217" iyz="-1.77455129012324E-18" izz="0.00141734865923851" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/second_stage.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/second_stage.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="second_stage_joint" type="revolute">
+        <origin xyz="0 0 0.8763" rpy="0 0 0" />
+        <parent link="main_mast_link" />
+        <child link="second_stage" />
+        <axis xyz="0 1 0" />
+        <limit lower="-2.70526" upper="2.70526" effort="0" velocity="3" />
+    </joint>
+    <link name="extension_link">
+        <inertial>
+            <origin xyz="0.228639006630954 4.10951606344374E-16 -2.47752720756047E-17" rpy="0 0 0" />
+            <mass value="0.706844425336657" />
+            <inertia ixx="0.00164163492180235" ixy="8.81973843263766E-19" ixz="-3.44160349526033E-19" iyy="0.00821970281046067" iyz="-1.94538882516496E-19" izz="0.0093859384857373" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/extension_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/extension_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="extension_joint" type="prismatic">
+        <origin xyz="0 0 -0.0571499999999991" rpy="0 1.5707963267949 0" />
+        <parent link="second_stage" />
+        <child link="extension_link" />
+        <axis xyz="1 0 0" />
+        <limit lower="0" upper="0.3048" effort="0" velocity="0" />
+    </joint>
+    <link name="claw_box_link">
+        <inertial>
+            <origin xyz="-0.028193448806546 -0.0317575451403042 -0.000817567157003651" rpy="0 0 0" />
+            <mass value="0.339591854364122" />
+            <inertia ixx="0.00199990060587769" ixy="3.01262381790949E-05" ixz="8.11787156454798E-06" iyy="0.000259292745532175" iyz="1.23194460807444E-05" izz="0.00199608581500413" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/claw_box_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/claw_box_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="claw_box_joint" type="fixed">
+        <origin xyz="0.524611600000001 0 0" rpy="0 0 0" />
+        <parent link="extension_link" />
+        <child link="claw_box_link" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1" upper="1" effort="0" velocity="0" />
+    </joint>
+    <link name="claw_link">
+        <inertial>
+            <origin xyz="0.115410284736902 4.01466852052012E-17 -1.20896937583458E-15" rpy="0 0 0" />
+            <mass value="1.28711297687921" />
+            <inertia ixx="0.00910861016146812" ixy="-3.43107439436541E-18" ixz="7.32634678938271E-17" iyy="0.0074781965707642" iyz="-2.38187194107209E-17" izz="0.0160332108601234" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/claw_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://knighttime_description/meshes/claw_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="claw_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="claw_box_link" />
+        <child link="claw_link" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="1.57" effort="0" velocity="0" />
+    </joint>
+    <transmission name="trans_main_mast_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="main_mast_joint">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="main_mast_joint_motor">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_second_stage_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="second_stage_joint">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="second_stage_joint_motor">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_extension_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="extension_joint">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="extension_joint_motor">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+
